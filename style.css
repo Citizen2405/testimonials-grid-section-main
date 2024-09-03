@@ -1,0 +1,167 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body, html {
+  height: 100dvh;
+}
+
+body {
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500;
+  font-size: 0.8125rem;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  margin: 2rem 1rem;
+  background-color: hsl(210, 46%, 95%);
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  line-height: 1.2;
+}
+body .container {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  max-width: 90rem;
+}
+body .container .card {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  box-shadow: 2px 2px 20px 2px rgb(157, 157, 157);
+}
+body .container .card .label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+body .container .card .label img {
+  border-radius: 50%;
+}
+body .container .card .label .details {
+  display: flex;
+  flex-direction: column;
+}
+body .container .card .label .details .designation {
+  opacity: 50%;
+}
+body .container .card .text-content {
+  display: grid;
+  gap: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+body .container .card .text-content .title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+body .container .card .text-content .description {
+  opacity: 70%;
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+body .container .daniel {
+  background-color: hsl(263, 55%, 55%);
+}
+body .container .jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+body .container .jeanette, body .container .kira {
+  background-color: hsl(0, 0%, 100%);
+}
+body .container .jeanette .label, body .container .kira .label {
+  color: hsl(217, 19%, 35%);
+}
+body .container .jeanette .text-content, body .container .kira .text-content {
+  color: hsl(217, 19%, 35%);
+}
+body .container .patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+@media (min-width: 800px) {
+  body .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body .container .daniel {
+    grid-column: span 2;
+    order: 1;
+  }
+  body .container .jonathan {
+    order: 2;
+  }
+  body .container .kira {
+    order: 3;
+    grid-row: span 2;
+  }
+  body .container .jeanette {
+    order: 4;
+  }
+  body .container .patrick {
+    order: 5;
+    grid-column: span 2;
+  }
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+}
+.attribution a {
+  color: hsl(263, 55%, 55%);
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
